@@ -1,2 +1,2 @@
 # youtube_ui
-This is a Youtube like UI, created just to apply for an internship.
+Pure CSS based youtube UI.
