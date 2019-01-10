@@ -1,7 +1,10 @@
 /* Container */
+html {
+    overflow-x: hidden;
+}
 body {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0;
+    margin: 0;
 }
 #container {
     width: 100%;
@@ -9,10 +12,58 @@ body {
     flex-wrap: nowrap;
 }
 #primary_cont {
-    width: 60%;
+    width: 70%;
 }
 #recomm_cont {
-    width: 40%;
+    width: 30%;
+    padding: 1%;
+}
+
+/* Header */
+#header_cont {
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 0px 1px 1px grey;
+    padding: 10px !important;
+}
+#logo_cont {
+    width: 20%;
+    text-align: left;
+}
+#search_cont {
+    width: 50%;
+    text-align: center;
+}
+#search_cont > input {
+    width: 50%;
+    padding: 5px 10px 5px 15px;
+    font-size: 16px;
+}
+#search_cont > button {
+    margin-left: -5px;
+    padding: 7px 20px 6px 20px;
+}
+#user_cont {
+    width: 30%;
+    text-align: right;
+    font-size: 18px;
+    color: lightslategray;
+}
+#user_cont > i {
+    margin-left: 20px;
+}
+.user-circle {
+    font-size: 30px;
+}
+.search {
+    display: none !important;
+}
+#logo_cont > i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+#youtube_logo {
+    height: 20px;
 }
 
 /* Video Container */
@@ -21,6 +72,7 @@ body {
 }
 #primary_cont #video_cont img{
     max-width: 100%;
+    border: 1px solid black;
 }
 
 /* Video Name Container */
@@ -33,36 +85,46 @@ body {
 }
 #vid_name_cont #vid_seq {
     color: blue;
-    font-size: 18px;
+    font-size: 12px;
 }
 #vid_name_cont #vid_name {
-    font-size: 26px;
+    font-size: 20px;
 }
 
 /* Video Action Container */
 #vid_dt_cont {
     display: flex;
     flex-wrap: nowrap;
+    border-bottom: 1px solid lightgrey;    
 }
 #vid_dt_cont #vid_views {
-    text-align: left; 
+    text-align: left;
+    font-size: 16px; 
     width: 50%;   
 }
 #vid_dt_cont #action_grid {
     width: 50%;
-    text-align: right;    
+    text-align: right; 
+    color: lightslategray;  
+    font-size: 18px;
 }
-#vid_dt_cont #action_grid > span {
-    margin-left: 5px;
+.action {
+    margin-left: 20px;
+    padding: 5px;
 }
 
+#reaction_cont {
+    display: inline-block;
+    border-bottom: 2px solid grey;
+    padding: 5px;
+}
 /* Comment Container */
 #comments_cont {
     padding: 2%;
 } 
 #comments_cont > span {
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: darkslategrey;
 }
@@ -75,9 +137,10 @@ body {
     margin-bottom: 15px;
 }
 /* Comment User Details */
-.comment_cont .user_img img{
+.user_img img{
     width: 50px;
     margin-right: 15px;
+    border-radius: 50%;
 }
 .user_name > span {
     margin:0 10px 0 0;
@@ -98,22 +161,49 @@ body {
 .comment_action {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-.comment_action > span {
     font-size: 16px;
-    margin-right: 10px; 
+    color: lightslategray;
 }
+
 /* Comment Replies */
-.view_reply > a > span {
+.view_reply > a {
     font-size: 16px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 /* Recommended Video Container */
 #recom_heading{
-    margin: 2%;
+    margin-left: 2%;
+    padding: 1.5%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#recom_heading > div {
+    width: 50%;
+}
+#upnext_heading {
+    text-align: left;
+}
+#autoplay_heading {
+    display: table;
+    text-align: right;
+    vertical-align: middle;
+    color: darkslategrey;
+}
+#autoplay_heading > span {
+    font-size: 14px;
+}
+#autoplay_heading > i {
+    margin-left: 5px;
+    font-size: 22px;
 }
 .re_sm_cont {
-    margin: 2%;
+    padding: 1.5%;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -154,6 +244,23 @@ body {
         width: 100%;
     }
     
+    /* Header */
+    #logo_cont {
+        width: 40%;
+    }
+    #search_cont {
+        display: none;
+    }
+    .search {
+        display: inline-block !important;
+    }
+    #user_cont{ 
+        width: 60%;   
+    }
+    #user_cont > i {
+        margin-left: 5px;
+    }
+
     /* Video Name Container*/
     #vid_name_cont #vid_seq {
         color: blue;
@@ -161,6 +268,21 @@ body {
     }
     #vid_name_cont #vid_name {
         font-size: 20px;
+    }
+    #views_tag{
+        display: none;
+    }
+    #vid_dt_cont #vid_views {
+        width: 25%;
+    }
+    #vid_dt_cont #action_grid {
+        width: 75%;
+    }
+    #vid_dt_cont #action_grid {
+        font-size: 14px;
+    }
+    .action {
+        margin-left: 1px;
     }
 
     /* Comment Conatainer */
